@@ -3,6 +3,11 @@ import './App.css';
 import ResultComponent from "./components/ResultComponent";
 import KeypadComponent from "./components/KeypadComponent";
 
+fetch('https://api.github.com/users/hacktivist123/repos')
+  .then(response => response.json())
+  .then(data => console.log(data));
+
+
 class App extends Component {
   state = {
     result: ""
